@@ -1,0 +1,35 @@
+---
+  title: Stories
+---
+%nav.current
+  %h1 Stories
+%article#nav.current
+  %section
+    -#
+      #header
+        #navigation
+          #visible
+            #selected
+              International
+            #caret
+          #dropdown.hidden
+            .option U.S.
+            .option.selected International
+            .option Economy
+            .option Technology
+            .option Science
+            .option Environment
+            .option Health
+            .option Education
+            .option Culture
+            .option Sports
+    %ul#headlines.list
+      %li#loading Loading...
+      %li#headline-template.nav.hidden{data: {goto: 0}}
+        = partial "headline"
+%nav#nav-template.next.hidden
+  %a.button.back Stories
+  %h1 Story Title
+%article#article-template.next.hidden
+  = partial "headline"
+  .article

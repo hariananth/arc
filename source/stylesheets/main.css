@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+body {
+  font-family: sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ChocolateChip-UI overrides - no nav bar */
+/*
+nav {
+  display: none;
+}
+article {
+  top: 0px;
+}
+*/
