@@ -1,19 +1,41 @@
 @charset "utf-8";
 
+/*
+ * Globals
+ */
 body {
   font-family: sans-serif;
+  z-index: -2;
 }
-
 .hidden {
   display: none;
 }
 
-/* ChocolateChip-UI overrides - no nav bar */
 /*
-nav {
-  display: none;
-}
+ * ChocolateChip-UI overrides - no nav bar, but let
+ * back button show through on articles
+ */
 article {
   top: 0px;
 }
-*/
+article[id*="article"] {
+  z-index: -1;
+}
+h1 {
+  display: none;
+}
+.article {
+  margin: 5px;
+}
+.block {
+  padding: 10px;
+}
+.storyline-0 {
+  background-color: rgba(0,0,0,0.15);
+}
+.storyline-1 {
+  border-left: 10px solid rgba(0,0,255,0.30);
+}
+.storyline-2 {
+  border-right: 10px solid rgba(0,0,127,0.45);
+}
