@@ -31,7 +31,7 @@ $(window).load(function() {
     node.removeAttr("id");
     node.addClass("headline");
     node.attr("data-goto", "article-"+id);
-    node.attr("data-article_url", headline.url || "/articles/"+id+".html");
+    node.attr("data-article_url", headline.url || "/articles/"+id);
     node.appendTo("#headlines");
   }
   function articleHandler(headline) {
