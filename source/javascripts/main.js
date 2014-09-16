@@ -11,11 +11,14 @@ $(window).load(function() {
     var maxPrefetch = 3;
     for (var i=0; i<(ids.length>maxPrefetch?maxPrefetch:ids.length); i++) {
       var headline = $($(".headline")[i]);
-      $.ajax({
-        url: headline.attr("data-article_url"),
-        async: false,
-        success: articleHandler(headline)
-      });
+      var url = headline.attr("data-article_url");
+      if (url && url.length > 0) {
+        $.ajax({
+          url: headline.attr("data-article_url"),
+          async: false,
+          success: articleHandler(headline)
+        });
+      }
     }
   }
   function addHeadlineToPage(id, headline) {
@@ -47,10 +50,33 @@ $(window).load(function() {
       article.find(".date").html(headline.find(".date").html());
       article.find(".time").html(headline.find(".time").html());
       // dump the article text
-      article.find(".article").html(articleHtml);
+      var articleWithClasses = addClassesToMarkdown(articleHtml);
+      article.find(".article").html(articleWithClasses);
       // append article to the body
       article.appendTo("body");
     };
+  }
+  function addClassesToMarkdown(articleHtml) {
+    var dummyElement = $("<div />");
+    dummyElement.html(articleHtml);
+    // now we can parse the article html
+    // The format of the story is such that each storyline is broken into
+    // sections, which are separated by H1 elements.
+    var storylines = {}; // {storyLine: idx}
+    //$("p", dummyElement).wrapAll("<div class='block' />");
+    $("h1", dummyElement).each(function(idx){
+      var h1 = $(this);
+      var storyline = h1.html();
+      var wrapperClass = "block ";
+      if (storyline in storylines) {
+        wrapperClass += "storyline-"+storylines[storyline];
+      } else {
+        storylines[storyline] = Object.keys(storylines).length;
+        wrapperClass += "storyline-"+storylines[storyline];
+      }
+      h1.nextUntil("h1").wrapAll("<div class='"+wrapperClass+"' />");
+    });
+    return dummyElement.html();
   }
   // fetch headlines
   $.getJSON("/articles/headlines.json", receivedHeadlines);
