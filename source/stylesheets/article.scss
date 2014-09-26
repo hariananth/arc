@@ -1,5 +1,6 @@
 .block {
   margin-bottom: 10px;
+  position: relative; // for the "lines" below
   @include body;
   p {
     padding: 0px 20px;
@@ -19,7 +20,6 @@
   @include h2;
 }
 .storyline-1, .storyline-2 {
-  position: relative;
   background-color: white;
 }
 .storyline-1 h2 {
@@ -31,18 +31,17 @@
   margin-left: 20px;
 }
 // the wings
-.storyline-1:before, .storyline-2:before {
-  content: " ";
-  height: 100%;
-  width: 5px;
+.line {
   position: absolute;
   top: 0px;
+  bottom: 0px;
+  width: 5px;
 }
-.storyline-1:before {
-  background-color: $green;
+.storyline-1 .line {
   left: 0px;
+  background-color: $green;
 }
-.storyline-2:before {
-  background-color: $blue;
+.storyline-2 .line {
   right: 0px;
+  background-color: $blue;
 }

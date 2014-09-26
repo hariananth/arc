@@ -14,13 +14,6 @@ body {
 
 // ChocolateChip-UI overrides - no nav bar, but let
 // back button show through on articles
-article {
-  top: 0px;
-  > section {
-    padding-top: 0px;
-    background-color: white;
-  }
-}
 article[id*="article"] {
   z-index: -1;
 }

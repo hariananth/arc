@@ -9,17 +9,38 @@ $(window).load(function() {
     }
     // now prefetch the first 3 stories
     var maxPrefetch = 3;
-    for (var i=0; i<(ids.length>maxPrefetch?maxPrefetch:ids.length); i++) {
+    var fetchCount = (ids.length > maxPrefetch ? maxPrefetch : ids.length);
+    var completions = 0;
+    for (var i=0; i<fetchCount; i++) {
       var headline = $($(".headline")[i]);
       var url = headline.attr("data-article_url");
       if (url && url.length > 0) {
         $.ajax({
           url: headline.attr("data-article_url"),
           async: false,
-          success: articleHandler(headline)
+          success: articleHandler(headline),
+          complete: function() {
+            completions++;
+            if (completions == fetchCount) {
+              addArticleListeners();
+            }
+          }
         });
       }
     }
+  }
+  function addArticleListeners() {
+    $("article").scroll(function() {
+      $(this).find(".line:not(.bounceInLeft):not(.bounceInRight)").each(function() {
+        if ($(this).visible(true)) {
+          if ($(this.parentNode).hasClass("storyline-1")) {
+            $(this).addClass("bounceInLeft");
+          } else {
+            $(this).addClass("bounceInRight");
+          }
+        }
+      });
+    });
   }
   function addHeadlineToPage(id, headline) {
     var node = $("#headline-template").clone().removeClass("hidden");
@@ -75,6 +96,10 @@ $(window).load(function() {
         wrapperClass += "storyline-"+storylines[storyline];
       }
       h1.nextUntil("h1").wrapAll("<div class='"+wrapperClass+"' />");
+    });
+    // add a "line" to the beginning of each block to signify the storyline
+    $(dummyElement).find(".block").each(function() {
+      $(this).prepend("<div class='line animated' />");
     });
     return dummyElement.html();
   }
