@@ -16,6 +16,10 @@ body {
 // back button show through on articles
 article {
   top: 0px;
+  > section {
+    padding-top: 0px;
+    background-color: white;
+  }
 }
 article[id*="article"] {
   z-index: -1;
@@ -26,6 +30,6 @@ h1 { // hide the headings, since they're used as block delimiters
   display: none;
 }
 
+@import "landing";
 @import "headline";
-
 @import "article";

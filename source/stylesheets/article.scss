@@ -1,13 +1,15 @@
 .block {
-  margin: 10px 0px;
+  margin-bottom: 10px;
   @include body;
   p {
     padding: 0px 20px;
+    margin: 0px;
   }
 }
 // main narrative has a distinct background color
 .storyline-0 {
-  background-color: $black-25;
+  background-color: $offwhite;
+  padding-top: 10px;
 }
 // the block header colors
 .block h2 {
@@ -15,6 +17,10 @@
   padding: 20px;
   color: white;
   @include h2;
+}
+.storyline-1, .storyline-2 {
+  position: relative;
+  background-color: white;
 }
 .storyline-1 h2 {
   background-color: $green;
@@ -25,9 +31,6 @@
   margin-left: 20px;
 }
 // the wings
-.storyline-1, .storyline-2 {
-  position: relative;
-}
 .storyline-1:before, .storyline-2:before {
   content: " ";
   height: 100%;

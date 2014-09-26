@@ -1,5 +1,17 @@
-.headline {
+.headline-container {
   height: 300px;
+  display: table-cell;
+  vertical-align: bottom;
+}
+.tagline {
+  margin: 15px 0px;
+}
+.byline {
+  margin-right: 5px;
+  border-right: 2px solid rgba(255,255,255,0.5);
+}
+.read-time {
+  float: right;
 }
 .title {
   @include h1;
