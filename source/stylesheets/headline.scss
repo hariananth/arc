@@ -1,0 +1,6 @@
+.headline {
+  height: 300px;
+}
+.title {
+  @include h1;
+}
