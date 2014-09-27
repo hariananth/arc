@@ -1,7 +1,7 @@
 .headline-container {
   height: 370px;
   vertical-align: bottom;
-  background-image: url("images/abdel.jpg");
+  background-image: url("../images/abdel.jpg");
   background-size: cover;
   color: white;
 }
@@ -17,7 +17,7 @@
     background-color: $orange-25;
     .back-img {
       transform: rotate(-45deg);
-      background-image: url("images/back.png");
+      background-image: url("../images/back.png");
       height: 16px;
       width: 14px;
       margin: 10px;
