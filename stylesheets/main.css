@@ -24,7 +24,7 @@ h1 {
   margin: 33px auto;
   height: 32px;
   width: 49px;
-  background-image: url("images/logo.png");
+  background-image: url("../images/logo.png");
   background-size: 100%; }
 
 /* line 11, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
@@ -37,7 +37,7 @@ h1 {
 .headline-container {
   height: 370px;
   vertical-align: bottom;
-  background-image: url("images/abdel.jpg");
+  background-image: url("../images/abdel.jpg");
   background-size: cover;
   color: white; }
 
@@ -57,7 +57,7 @@ h1 {
     /* line 18, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
     *[id*='article'] .headline-container .back-btn .back-img {
       transform: rotate(-45deg);
-      background-image: url("images/back.png");
+      background-image: url("../images/back.png");
       height: 16px;
       width: 14px;
       margin: 10px;

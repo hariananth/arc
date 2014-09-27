@@ -52,7 +52,7 @@ $(window).load(function() {
     node.removeAttr("id");
     node.addClass("headline");
     node.attr("data-goto", "article-"+id);
-    node.attr("data-article_url", headline.url || "articles/"+id);
+    node.attr("data-article_url", headline.url || "../articles/"+id);
     node.appendTo("#headlines");
   }
   function articleHandler(headline) {
@@ -105,5 +105,5 @@ $(window).load(function() {
     return dummyElement.html();
   }
   // fetch headlines
-  $.getJSON("articles/headlines.json", receivedHeadlines);
+  $.getJSON("../articles/headlines.json", receivedHeadlines);
 });
