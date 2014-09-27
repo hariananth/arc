@@ -1,0 +1,147 @@
+/* line 7, /Users/hariananth/workspace/arc/source/stylesheets/main.scss */
+body {
+  font-family: sans-serif;
+  z-index: -2; }
+
+/* line 11, /Users/hariananth/workspace/arc/source/stylesheets/main.scss */
+.hidden {
+  display: none; }
+
+/* line 17, /Users/hariananth/workspace/arc/source/stylesheets/main.scss */
+article[id*="article"] {
+  z-index: -1; }
+
+/* line 22, /Users/hariananth/workspace/arc/source/stylesheets/main.scss */
+h1 {
+  display: none; }
+
+/* line 1, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
+#header {
+  text-align: center; }
+
+/* line 4, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
+#logo {
+  margin: 33px auto;
+  height: 32px;
+  width: 49px;
+  background-image: url("/images/logo.png");
+  background-size: 100%; }
+
+/* line 11, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
+#navigation {
+  text-transform: uppercase;
+  line-height: 20px;
+  margin-bottom: 24px; }
+
+/* line 1, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.headline-container {
+  height: 370px;
+  vertical-align: bottom;
+  background-image: url("/images/abdel.jpg");
+  background-size: cover;
+  color: white; }
+
+/* line 8, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.headline-mask {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-bottom: -142px; }
+
+/* line 14, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+*[id*='article'] .headline-container {
+  height: 568px; }
+  /* line 16, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+  *[id*='article'] .headline-container .back-btn {
+    background-color: rgba(250, 169, 24, 0.25); }
+    /* line 18, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+    *[id*='article'] .headline-container .back-btn .back-img {
+      transform: rotate(-45deg);
+      background-image: url("/images/back.png");
+      height: 16px;
+      width: 14px;
+      margin: 10px;
+      background-size: 100%; }
+
+/* line 28, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.back-btn, nav[class='current'] > .back {
+  height: 35px;
+  width: 35px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 45px;
+  right: 25px;
+  cursor: pointer; }
+
+/* line 37, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.tagline {
+  margin: 15px 0px; }
+
+/* line 40, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.byline {
+  margin-right: 5px;
+  border-right: 2px solid rgba(255, 255, 255, 0.5); }
+
+/* line 44, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.read-time {
+  float: right; }
+
+/* line 47, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.title {
+  font-size: 28px;
+  line-height: 36px; }
+
+/* line 1, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.block {
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 18px;
+  line-height: 32px; }
+  /* line 5, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  .block p {
+    padding: 0px 20px;
+    margin: 0px; }
+
+/* line 11, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.storyline-0 {
+  background-color: whitesmoke;
+  padding-top: 10px; }
+
+/* line 16, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.block h2 {
+  margin: 0px;
+  padding: 20px;
+  color: white;
+  font-size: 22px;
+  line-height: 36px; }
+
+/* line 22, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.storyline-1, .storyline-2 {
+  background-color: white; }
+
+/* line 25, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.storyline-1 h2 {
+  background-color: #4CAE4E;
+  margin-right: 20px; }
+
+/* line 29, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.storyline-2 h2 {
+  background-color: #2F7BAF;
+  margin-left: 20px; }
+
+/* line 34, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.line {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 45px; }
+
+/* line 40, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.storyline-1 .line {
+  left: -40px;
+  background-color: #4CAE4E; }
+
+/* line 44, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.storyline-2 .line {
+  right: -40px;
+  background-color: #2F7BAF; }
