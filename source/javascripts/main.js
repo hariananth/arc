@@ -58,6 +58,7 @@ $(window).load(function() {
   function articleHandler(headline) {
     // add a nav bar
     var navbar = $("#nav-template").clone().removeClass("hidden");
+    navbar.removeAttr("id");
     navbar.find("h1").html(headline.find(".title").html());
     navbar.appendTo("body");
     return function(articleHtml) {

@@ -251,6 +251,7 @@ li.comp > aside.vertical {
 /* ============================== 
    Buttons
    =========================== */
+/*
 a.button {
   cursor: pointer;
   text-decoration: none;
@@ -359,12 +360,13 @@ html[dir=rtl] .toolbar > .button.align-flush {
   right: auto;
   left: 15px;
 }
+*/
 /* ==============================
    Nav Bars
    =========================== */
 #global-nav {
-  /*background-color: #f7f7f7;*/
-  border-bottom: solid 1px #a7a7aa;
+  /*background-color: #f7f7f7;
+  border-bottom: solid 1px #a7a7aa;*/
   overflow: hidden;
 }
 nav {

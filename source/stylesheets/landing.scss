@@ -1,4 +1,15 @@
-.nav.headline, .headline-container {
-  background-color: rgb(200,200,200);
-  color: white;
+#header {
+  text-align: center;
+}
+#logo {
+  margin: 33px auto;
+  height: 32px;
+  width: 49px;
+  background-image: url("/images/logo.png");
+  background-size: 100%;
+}
+#navigation {
+  text-transform: uppercase;
+  line-height: 20px;
+  margin-bottom: 24px;
 }

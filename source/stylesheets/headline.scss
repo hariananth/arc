@@ -1,7 +1,38 @@
 .headline-container {
-  height: 300px;
-  display: table-cell;
+  height: 370px;
   vertical-align: bottom;
+  background-image: url("/images/abdel.jpg");
+  background-size: cover;
+  color: white;
+}
+.headline-mask {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  margin-bottom: -142px;
+}
+*[id*='article'] .headline-container {
+  height: 568px;
+  .back-btn {
+    background-color: $orange-25;
+    .back-img {
+      transform: rotate(-45deg);
+      background-image: url("/images/back.png");
+      height: 16px;
+      width: 14px;
+      margin: 10px;
+      background-size: 100%;
+    }
+  }
+}
+.back-btn, nav[class='current'] > .back {
+  height: 35px;
+  width: 35px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 45px;
+  right: 25px;
+  cursor: pointer;
 }
 .tagline {
   margin: 15px 0px;
