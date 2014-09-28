@@ -49,11 +49,50 @@ $(window).load(function() {
     node.find(".name").html(headline.author);
     node.find(".date").html(headline.date);
     node.find(".time").html(headline.time);
+    if (headline.bookmarked) {
+      node.find(".bookmark").removeClass("invisible");
+      node.find(".overlay-bookmark").addClass("enabled");
+    }
     node.removeAttr("id");
     node.addClass("headline");
     node.attr("data-goto", "article-"+id);
     node.attr("data-article_url", headline.url || "articles/"+id);
     node.appendTo("#headlines");
+
+    // longpress listener on headline to show bookmark/share overlay
+    var pressTimer;
+    var showingOverlay = false;
+    node.mouseup(function() {
+      // Clear timeout
+      window.clearTimeout(pressTimer);
+      if (node.find(".headline-overlay").hasClass("hidden")) {
+        showingOverlay = false;
+      } else {
+        setTimeout(function() {
+          if (node.find(".headline-overlay").hasClass("hidden")) {
+            showingOverlay = false;
+          } else {
+            showingOverlay = true;
+          }
+        }, 300);
+      }
+      return true;
+    }).mousedown(function() {
+      // Set timeout
+      pressTimer = window.setTimeout(function() {
+        node.find(".headline-text-container").toggleClass("overlayed");
+        node.find(".headline-overlay").toggleClass("hidden");
+      }, 500)
+      return true; 
+    }).click(function() {
+      // if overlayed and click, kill overlay and clear timer
+      if (showingOverlay) {
+        node.find(".headline-text-container").removeClass("overlayed");
+        node.find(".headline-overlay").addClass("hidden");
+        window.clearTimeout(pressTimer);
+        return false;
+      }
+    });
   }
   function articleHandler(headline) {
     // add a nav bar

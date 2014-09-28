@@ -11,6 +11,9 @@ body {
 .hidden {
   display: none;
 }
+.invisible {
+  visibility: hidden;
+}
 
 // ChocolateChip-UI overrides - no nav bar, but let
 // back button show through on articles
