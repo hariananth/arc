@@ -1,15 +1,44 @@
 #header {
   text-align: center;
+  background-color: $orange;
 }
 #logo {
-  margin: 33px auto;
-  height: 32px;
-  width: 49px;
+  margin: 0px auto;
+  height: 103px;
+  width: 255px;
   background-image: url("../images/logo.png");
   background-size: 100%;
 }
 #navigation {
-  text-transform: uppercase;
-  line-height: 20px;
-  margin-bottom: 24px;
+  padding: 19px 0px;
+  #visible {
+    cursor: pointer;
+  }
+  #visible, #selected, #caret {
+    display: inline-block;
+  }
+  #selected {
+    text-transform: uppercase;
+    line-height: 21px;
+    color: white;
+    font-weight: bolder;
+    font-size: 14px;
+  }
+  #caret {
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-bottom: 3px;
+    margin-left: 5px;
+  }
+}
+#headlines {
+  margin: 0px;
+  padding: 0px;
+  border-top: 1px solid rgba(0,0,0,0.8);
+}
+.nav.headline {
+  cursor: pointer;
 }

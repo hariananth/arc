@@ -1,23 +1,37 @@
 {
   "1": {
        "title": "Into the Grasp of the Islamic State",
-       "tagline": "James Foley and Abdel-Majed Abdel Bary",
+       "tagline": "How did James Foley and Abdel-Majed Abdel Bary Cross Paths?",
        "author": "Justin Megahan",
-       "date": "9/11/14",
+       "date": "9/11/14 | 2:30pm",
        "time": 12
      },
   "2": {
        "title": "NFL Player Suspended for Punching Fiancee",
-       "tagline": "Ray Rice and Janay Palmer",
-       "author": "Justin Megahan",
-       "date": "9/5/14",
-       "time": 18
+       "tagline": "Ray Rice Punched his Defenseless Wife Janay Palmer in an Elevator.",
+       "author": "Hunter S. Thompson",
+       "date": "9/5/14 | 2:30am",
+       "time": 8
      },
   "3": {
-       "title": "African-American Teenager Shot by the Police",
-       "tagline": "Michael Brown and Darren Wilson",
-       "author": "Justin Megahan",
-       "date": "9/4/14",
-       "time": 15
+       "title": "African-American Teenager Shot Dead",
+       "tagline": "Darren Wilson Fatally Shot Michael Brown and Stirred a Riot in Ferguson, Missouri.",
+       "author": "Ernest Hemingway",
+       "date": "8/28/14 | 3:30pm",
+       "time": 14
+     },
+  "4": {
+       "title": "Climage Change is not up for Debate",
+       "tagline": "Neil deGrasse Tyson Addresses Skeptic Steven Goddard, Data vs. Assumptions.",
+       "author": "Bill Nye the Science Guy",
+       "date": "8/20/14 | 12:00pm",
+       "time": 6
+     },
+  "5": {
+       "title": "Benzene Poisens Chinese Workers",
+       "tagline": "Tian Lihua Faces Death as Jilin Connell's Chemical Plants Increases Production.",
+       "author": "Al Gore",
+       "date": "8/19/14 | 12:30pm",
+       "time": 13
      }
 }

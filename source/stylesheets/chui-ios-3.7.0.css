@@ -200,8 +200,8 @@ html[dir=rtl] .previous {
 }
 article > section,
 .slide-out > section {
-  /*padding-top: 20px;*/
-  padding-bottom: 100px;
+  /*padding-top: 20px;
+  padding-bottom: 100px;*/
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
@@ -447,6 +447,7 @@ nav > a.button + h1 {
 /* ==============================
    Lists (Basic)
    =========================== */
+/*
 .list {
   list-style: none;
   margin: 0 0 10px 0;
@@ -457,7 +458,6 @@ nav > a.button + h1 {
   overflow: hidden;
   width: 100%;
 }
-/*
 .list > li {
   padding: 13px 15px 13px 15px;
   -webkit-transition: all 0.3s ease-out;
@@ -526,6 +526,7 @@ nav > a.button + h1 {
 /* ==============================
    List Footer
   ============================ */
+/*
 .list + p,
 .list + p + p {
   color: #7f7f7f;
@@ -538,9 +539,11 @@ nav > a.button + h1 {
 .list ~ p + p {
   margin-top: 5pt;
 }
+*/
 /* ==============================
    List Hover & Selected States
   ============================ */
+/*
 .isDesktop .list > li[data-goto]:hover,
 .isDesktop .list > li[data-show-article]:hover,
 .isDesktop .list.select > li:hover,
@@ -548,9 +551,11 @@ nav > a.button + h1 {
   background-color: #d9d9d9;
   cursor: pointer;
 }
+*/
 /* ==============================
   List title & subtitle
   ============================ */
+/*
 .list > li > h3,
 .list > li > h4 {
   width: 80%;
@@ -574,6 +579,7 @@ nav > a.button + h1 {
   font-weight: normal;
   color: #7f7f7f;
 }
+*/
 /* ==============================
   List detail
   ============================ */

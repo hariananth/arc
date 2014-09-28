@@ -1,15 +1,19 @@
 .headline-container {
   height: 370px;
-  vertical-align: bottom;
+  margin-top: -20px;
   background-image: url("../images/abdel.jpg");
   background-size: cover;
-  color: white;
+  position: relative;
 }
 .headline-mask {
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.6);
-  margin-bottom: -142px;
+  background: linear-gradient(to bottom,  rgba(0,15,30,0.75) 0%,rgba(0,0,0,0.85) 100%);
+}
+.headline-text-container {
+  position: absolute;
+  bottom: 0px;
+  margin: 20px;
 }
 *[id*='article'] .headline-container {
   height: 568px;
@@ -25,25 +29,61 @@
     }
   }
 }
-.back-btn, nav[class='current'] > .back {
-  height: 35px;
-  width: 35px;
-  transform: rotate(45deg);
-  position: absolute;
-  top: 45px;
-  right: 25px;
-  cursor: pointer;
-}
-.tagline {
-  margin: 15px 0px;
-}
-.byline {
-  margin-right: 5px;
-  border-right: 2px solid rgba(255,255,255,0.5);
-}
-.read-time {
-  float: right;
+// landing page title
+.headline .title {
+  color: $orange;
 }
 .title {
   @include h1;
+  font-family: serif;
+}
+.tagline {
+  margin: 20px 0px 15px;
+  border-top: 2px solid rgba(255,255,255,0.1);
+  padding-top: 5px;
+  color: rgba(255,255,255,0.67);
+  font-size: 14px;
+  line-height: 18px;
+}
+.byline, .date, .read-time {
+  color: rgba(127,127,127,0.67);
+  font-size: 12px;
+  font-weight: bolder;
+}
+// lighten the text/border in the article (less mask)
+*[id*='article'] {
+  .byline, .date, .read-time {
+    color: rgba(255,255,255,0.67);
+  }
+  .tagline {
+    border-top: 2px solid $orange-25;
+  }
+}
+.headline-text-container .icon {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background-size: 100%;
+  vertical-align: top;
+}
+.byline {
+  margin-bottom: 5px;
+}
+.byline .icon {
+  background-image: url("../images/author.png");
+}
+.read-time .icon {
+  background-image: url("../images/time.png");
+}
+.date-container .icon {
+  background-image: url("../images/date.png");
+}
+.name, .date {
+  margin-left: 5px;
+}
+.read-txt {
+  margin-right: 5px;
+}
+.read-time {
+  float: right;
 }

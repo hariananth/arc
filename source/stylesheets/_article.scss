@@ -1,3 +1,25 @@
+// article page title
+*[id*='article'] .title {
+  color: white;
+}
+// lighten the mask
+*[id*='article'] .headline-mask {
+  opacity: 0.67;
+}
+// back button
+.back-btn, nav[class='current'] > .back {
+  height: 35px;
+  width: 35px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 45px;
+  right: 25px;
+  cursor: pointer;
+}
+.back-btn {
+  top: 65px; // 20px margin
+}
+// each "block" (section) in the article
 .block {
   margin-bottom: 10px;
   position: relative; // for the "lines" below

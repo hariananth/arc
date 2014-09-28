@@ -68,7 +68,7 @@ $(window).load(function() {
       // copy the headline info over
       article.find(".title").html(headline.find(".title").html());
       article.find(".tagline").html(headline.find(".tagline").html());
-      article.find(".name").html(headline.find(".author").html());
+      article.find(".name").html(headline.find(".name").html());
       article.find(".date").html(headline.find(".date").html());
       article.find(".time").html(headline.find(".time").html());
       // dump the article text
