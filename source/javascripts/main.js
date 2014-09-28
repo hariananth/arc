@@ -45,27 +45,16 @@ $(window).load(function() {
     });
     // longpress listener to show nav overlay
     window.articlePressTimer;
-    var showingOverlay = false;
     articles.mouseup(function() {
       // Clear timeout
       window.clearTimeout(window.articlePressTimer);
-      if ($(".article-overlay").hasClass("hidden")) {
-        showingOverlay = false;
-      } else {
-        setTimeout(function() {
-          if ($(".article-overlay").hasClass("hidden")) {
-            showingOverlay = false;
-          } else {
-            showingOverlay = true;
-          }
-        }, 300);
-      }
       return true;
     }).mousedown(function() {
       // Set timeout
       window.articlePressTimer = window.setTimeout(function() {
         $(".article-overlay").removeClass("previous");
         $(".article-overlay").toggleClass("hidden");
+        $("nav.current").toggleClass("hidden");
       }, 500)
       return true; 
     })
@@ -181,6 +170,7 @@ $(window).load(function() {
   // TODO open correct page on click
   $(".article-overlay").click(function() {
     // if overlayed and click, kill overlay and clear timer
+    $("nav.current").removeClass("hidden");
     $(".article-overlay").removeClass("previous");
     $(".article-overlay").addClass("hidden");
     window.clearTimeout(window.articlePressTimer);
