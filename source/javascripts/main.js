@@ -30,7 +30,9 @@ $(window).load(function() {
     }
   }
   function addArticleListeners() {
-    $("article").scroll(function() {
+    var articles = $("article");
+    // scroll listener to bounce in the markers
+    articles.scroll(function() {
       $(this).find(".line:not(.bounceInLeft):not(.bounceInRight)").each(function() {
         if ($(this).visible(true)) {
           if ($(this.parentNode).hasClass("storyline-1")) {
@@ -41,6 +43,32 @@ $(window).load(function() {
         }
       });
     });
+    // longpress listener to show nav overlay
+    window.articlePressTimer;
+    var showingOverlay = false;
+    articles.mouseup(function() {
+      // Clear timeout
+      window.clearTimeout(window.articlePressTimer);
+      if ($(".article-overlay").hasClass("hidden")) {
+        showingOverlay = false;
+      } else {
+        setTimeout(function() {
+          if ($(".article-overlay").hasClass("hidden")) {
+            showingOverlay = false;
+          } else {
+            showingOverlay = true;
+          }
+        }, 300);
+      }
+      return true;
+    }).mousedown(function() {
+      // Set timeout
+      window.articlePressTimer = window.setTimeout(function() {
+        $(".article-overlay").removeClass("previous");
+        $(".article-overlay").toggleClass("hidden");
+      }, 500)
+      return true; 
+    })
   }
   function addHeadlineToPage(id, headline) {
     var node = $("#headline-template").clone().removeClass("hidden");
@@ -149,4 +177,13 @@ $(window).load(function() {
   }
   // fetch headlines
   $.getJSON("articles/headlines.json", receivedHeadlines);
+  // add article overlay listener to close the overlay on click
+  // TODO open correct page on click
+  $(".article-overlay").click(function() {
+    // if overlayed and click, kill overlay and clear timer
+    $(".article-overlay").removeClass("previous");
+    $(".article-overlay").addClass("hidden");
+    window.clearTimeout(window.articlePressTimer);
+    return false;
+  });
 });

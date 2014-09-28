@@ -1,3 +1,5 @@
+// headline styles that apply to both the landing and article pages
+// (most page-specific headline styles are in _landing/_article sass files)
 .headline-container {
   height: 370px;
   margin-top: -20px;
@@ -15,51 +17,7 @@
   bottom: 0px;
   margin: 20px;
 }
-.headline-text-container.overlayed {
-  opacity: 0.1;
-}
-// headline swipe menu (on landing page to bookmark, share, etc.)
-.headline-overlay {
-  position: absolute;
-  width: 100%;
-  height: 370px;
-  top: 0px;
-  //background-color: rgba(0,15,30,0.75);
-}
-.bookmark {
-  height: 12px;
-  width: 8px;
-  background-image: url("../images/bookmark.png");
-  background-size: 100%;
-  margin-bottom: 10px;
-}
-.overlay-bookmark, .overlay-separator, .overlay-share {
-  position: absolute;
-}
-.overlay-bookmark, .overlay-share {
-  right: 30px;
-  height: 25px;
-  width: 16px;
-  background-size: 100% 100%;
-}
-.overlay-bookmark {
-  top: 110px;
-  background-image: url("../images/overlay-bookmark.png");
-}
-.overlay-bookmark.enabled {
-  background-image: url("../images/bookmark.png");
-}
-.overlay-separator {
-  top: 50%;
-  height: 1px;
-  width: 30px;
-  background-color: rgba(255,255,255,0.10);
-  right: 25px;
-}
-.overlay-share {
-  top: 235px;
-  background-image: url("../images/overlay-share.png");
-}
+// headline on article page
 *[id*='article'] .headline-container {
   height: 568px;
   .back-btn {
@@ -73,10 +31,6 @@
       background-size: 100%;
     }
   }
-}
-// landing page title
-.headline .title {
-  color: $orange;
 }
 .title {
   @include h1;

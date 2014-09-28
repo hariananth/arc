@@ -41,6 +41,12 @@
   color: white;
   @include h2;
 }
+// links are just orange
+.block a {
+  font-weight: bold;
+  color: $orange;
+  text-decoration: none;
+}
 .storyline-1, .storyline-2 {
   background-color: white;
 }
@@ -66,4 +72,19 @@
 .storyline-2 .line {
   right: -40px;
   background-color: $blue;
+}
+// overlay visible on longpress
+.article-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 15, 30, 0.8);
+  padding: 20px;
+  text-align: center;
+  .title {
+    color: $orange;
+  }
+  .search-container {
+    border-bottom: 1px solid rgba(255,255,255,0.33);
+  }
 }
