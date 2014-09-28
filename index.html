@@ -27,7 +27,21 @@
     <script src="javascripts/main.js" type="text/javascript"></script>
   </head>
   <body class="index">
-    <div class='article-overlay'></div>
+    <div class='overlay article-overlay hidden'>
+  <div class='article-overlay-content-container'>
+    <div class='title'>Arc.</div>
+    <div class='search-container'>
+      <div class='search-icon'></div>
+      <input class='search-input' placeholder='Search Stories'>
+    </div>
+    <div class='home'></div>
+    <div class='profile'></div>
+    <div class='bookmarks'></div>
+    <div class='share'></div>
+    <div class='font'></div>
+    <div class='brightness'></div>
+  </div>
+</div>
 <article class='current' id='nav'>
   <section>
     <div id='header'>
@@ -79,7 +93,7 @@
               <span class='date'>Date</span>
             </div>
           </div>
-          <div class='headline-overlay hidden'>
+          <div class='overlay headline-overlay hidden'>
             <div class='overlay-bookmark'></div>
             <div class='overlay-separator'></div>
             <div class='overlay-share'></div>
@@ -117,7 +131,7 @@
           <span class='date'>Date</span>
         </div>
       </div>
-      <div class='headline-overlay hidden'>
+      <div class='overlay headline-overlay hidden'>
         <div class='overlay-bookmark'></div>
         <div class='overlay-separator'></div>
         <div class='overlay-share'></div>

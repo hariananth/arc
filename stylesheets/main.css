@@ -68,38 +68,26 @@ h1 {
 .nav.headline {
   cursor: pointer; }
 
-/* line 1, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
-.headline-container {
-  height: 370px;
-  margin-top: -20px;
-  background-image: url("../images/abdel.jpg");
-  background-size: cover;
-  position: relative; }
+/* line 46, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
+.headline .title {
+  color: #FAA918; }
 
-/* line 8, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
-.headline-mask {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 15, 30, 0.75) 0%, rgba(0, 0, 0, 0.85) 100%); }
-
-/* line 13, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
-.headline-text-container {
-  position: absolute;
-  bottom: 0px;
-  margin: 20px; }
-
-/* line 18, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 50, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .headline-text-container.overlayed {
   opacity: 0.1; }
 
-/* line 22, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 53, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
+.overlay {
+  background-color: rgba(0, 15, 30, 0.5); }
+
+/* line 56, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .headline-overlay {
   position: absolute;
   width: 100%;
   height: 370px;
   top: 0px; }
 
-/* line 29, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 62, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .bookmark {
   height: 12px;
   width: 8px;
@@ -107,27 +95,27 @@ h1 {
   background-size: 100%;
   margin-bottom: 10px; }
 
-/* line 36, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 69, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .overlay-bookmark, .overlay-separator, .overlay-share {
   position: absolute; }
 
-/* line 39, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 72, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .overlay-bookmark, .overlay-share {
   right: 30px;
   height: 25px;
   width: 16px;
   background-size: 100% 100%; }
 
-/* line 45, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 78, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .overlay-bookmark {
   top: 110px;
   background-image: url("../images/overlay-bookmark.png"); }
 
-/* line 49, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 82, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .overlay-bookmark.enabled {
   background-image: url("../images/bookmark.png"); }
 
-/* line 52, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 85, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .overlay-separator {
   top: 50%;
   height: 1px;
@@ -135,18 +123,38 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1);
   right: 25px; }
 
-/* line 59, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 92, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 .overlay-share {
   top: 235px;
   background-image: url("../images/overlay-share.png"); }
 
-/* line 63, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 3, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.headline-container {
+  height: 370px;
+  margin-top: -20px;
+  background-image: url("../images/abdel.jpg");
+  background-size: cover;
+  position: relative; }
+
+/* line 10, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.headline-mask {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 15, 30, 0.75) 0%, rgba(0, 0, 0, 0.85) 100%); }
+
+/* line 15, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+.headline-text-container {
+  position: absolute;
+  bottom: 0px;
+  margin: 20px; }
+
+/* line 21, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 *[id*='article'] .headline-container {
   height: 568px; }
-  /* line 65, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+  /* line 23, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
   *[id*='article'] .headline-container .back-btn {
     background-color: rgba(250, 169, 24, 0.25); }
-    /* line 67, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+    /* line 25, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
     *[id*='article'] .headline-container .back-btn .back-img {
       transform: rotate(-45deg);
       background-image: url("../images/back.png");
@@ -155,17 +163,13 @@ h1 {
       margin: 10px;
       background-size: 100%; }
 
-/* line 78, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
-.headline .title {
-  color: #FAA918; }
-
-/* line 81, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 35, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .title {
   font-size: 28px;
   line-height: 32px;
   font-family: serif; }
 
-/* line 85, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 39, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .tagline {
   margin: 20px 0px 15px;
   border-top: 2px solid rgba(255, 255, 255, 0.1);
@@ -174,20 +178,20 @@ h1 {
   font-size: 14px;
   line-height: 18px; }
 
-/* line 93, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 47, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .byline, .date, .read-time {
   color: rgba(127, 127, 127, 0.67);
   font-size: 12px;
   font-weight: bolder; }
 
-/* line 100, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 54, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 *[id*='article'] .byline, *[id*='article'] .date, *[id*='article'] .read-time {
   color: rgba(255, 255, 255, 0.67); }
-/* line 103, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 57, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 *[id*='article'] .tagline {
   border-top: 2px solid rgba(250, 169, 24, 0.25); }
 
-/* line 107, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 61, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .headline-text-container .icon {
   display: inline-block;
   height: 14px;
@@ -195,31 +199,31 @@ h1 {
   background-size: 100%;
   vertical-align: top; }
 
-/* line 114, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 68, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .byline {
   margin-bottom: 5px; }
 
-/* line 117, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 71, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .byline .icon {
   background-image: url("../images/author.png"); }
 
-/* line 120, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 74, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .read-time .icon {
   background-image: url("../images/time.png"); }
 
-/* line 123, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 77, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .date-container .icon {
   background-image: url("../images/date.png"); }
 
-/* line 126, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 80, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .name, .date {
   margin-left: 5px; }
 
-/* line 129, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 83, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .read-txt {
   margin-right: 5px; }
 
-/* line 132, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
+/* line 86, /Users/hariananth/workspace/arc/source/stylesheets/_headline.scss */
 .read-time {
   float: right; }
 
@@ -269,33 +273,81 @@ h1 {
   font-size: 22px;
   line-height: 32px; }
 
-/* line 44, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 45, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.block a {
+  font-weight: bold;
+  color: #FAA918;
+  text-decoration: none; }
+
+/* line 50, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-1, .storyline-2 {
   background-color: white; }
 
-/* line 47, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 53, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-1 h2 {
   background-color: #4CAE4E;
   margin-right: 20px; }
 
-/* line 51, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 57, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-2 h2 {
   background-color: #2F7BAF;
   margin-left: 20px; }
 
-/* line 56, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 62, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .line {
   position: absolute;
   top: 0px;
   bottom: 0px;
   width: 45px; }
 
-/* line 62, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 68, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-1 .line {
   left: -40px;
   background-color: #4CAE4E; }
 
-/* line 66, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 72, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-2 .line {
   right: -40px;
   background-color: #2F7BAF; }
+
+/* line 77, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.article-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 15, 30, 0.9);
+  text-align: center; }
+  /* line 83, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  .article-overlay .article-overlay-content-container {
+    padding: 20px; }
+  /* line 86, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  .article-overlay .title {
+    color: #FAA918;
+    padding: 20px 40px; }
+  /* line 90, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  .article-overlay .search-container {
+    padding: 15px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+    text-align: left; }
+  /* line 95, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  .article-overlay .search-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    background-image: url("../images/search.png");
+    background-size: 100%;
+    display: inline-block;
+    vertical-align: bottom; }
+  /* line 104, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  .article-overlay .search-input {
+    background-color: inherit;
+    border: 0px; }
+  /* line 108, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  .article-overlay .home, .article-overlay .profile, .article-overlay .bookmarks, .article-overlay .share, .article-overlay .font, .article-overlay .brightness {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 25px 25px 0px;
+    text-align: center;
+    display: inline-block; }
