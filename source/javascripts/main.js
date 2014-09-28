@@ -110,6 +110,10 @@ $(window).load(function() {
       article.find(".name").html(headline.find(".name").html());
       article.find(".date").html(headline.find(".date").html());
       article.find(".time").html(headline.find(".time").html());
+      if (headline.bookmarked) {
+        node.find(".bookmark").removeClass("invisible");
+        node.find(".overlay-bookmark").addClass("enabled");
+      }
       // dump the article text
       var articleWithClasses = addClassesToMarkdown(articleHtml);
       article.find(".article").html(articleWithClasses);
