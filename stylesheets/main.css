@@ -11,13 +11,13 @@ body {
 .invisible {
   visibility: hidden; }
 
-/* line 20, /Users/hariananth/workspace/arc/source/stylesheets/main.scss */
+/* line 17, /Users/hariananth/workspace/arc/source/stylesheets/main.scss */
+.hide-overflow {
+  overflow: hidden; }
+
+/* line 23, /Users/hariananth/workspace/arc/source/stylesheets/main.scss */
 article[id*="article"] {
   z-index: -1; }
-
-/* line 25, /Users/hariananth/workspace/arc/source/stylesheets/main.scss */
-h1 {
-  display: none; }
 
 /* line 1, /Users/hariananth/workspace/arc/source/stylesheets/_landing.scss */
 #header {
@@ -250,22 +250,25 @@ h1 {
   top: 65px; }
 
 /* line 23, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
-.block {
-  margin-bottom: 10px;
-  position: relative;
+.block, .compass {
   font-size: 18px;
   line-height: 32px; }
-  /* line 27, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
-  .block p {
+  /* line 25, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  .block p, .compass p {
     padding: 0px 20px;
     margin: 0px; }
 
-/* line 33, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 31, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.block {
+  margin-bottom: 10px;
+  position: relative; }
+
+/* line 36, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-0 {
-  background-color: rgba(200, 200, 25, 0.05);
+  background-color: #FAFAE6;
   padding-top: 10px; }
 
-/* line 38, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 41, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .block h2 {
   margin: 0px;
   padding: 20px;
@@ -273,63 +276,63 @@ h1 {
   font-size: 22px;
   line-height: 32px; }
 
-/* line 45, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 48, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .block a {
   font-weight: bold;
   color: #FAA918;
   text-decoration: none; }
 
-/* line 50, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 53, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-1, .storyline-2 {
   background-color: white; }
 
-/* line 53, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 56, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-1 h2 {
   background-color: #4CAE4E;
   margin-right: 20px; }
 
-/* line 57, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 60, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-2 h2 {
   background-color: #2F7BAF;
   margin-left: 20px; }
 
-/* line 62, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 65, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .line {
   position: absolute;
   top: 0px;
   bottom: 0px;
   width: 45px; }
 
-/* line 68, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 71, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-1 .line {
   left: -40px;
   background-color: #4CAE4E; }
 
-/* line 72, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 75, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .storyline-2 .line {
   right: -40px;
   background-color: #2F7BAF; }
 
-/* line 77, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+/* line 80, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
 .article-overlay {
   position: fixed;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 15, 30, 0.9);
   text-align: center; }
-  /* line 83, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  /* line 86, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
   .article-overlay .article-overlay-content-container {
     padding: 20px; }
-  /* line 86, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  /* line 89, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
   .article-overlay .title {
     color: #FAA918;
     padding: 20px 40px; }
-  /* line 90, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  /* line 93, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
   .article-overlay .search-container {
     padding: 15px 0px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.33);
     text-align: left; }
-  /* line 95, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  /* line 98, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
   .article-overlay .search-icon {
     height: 20px;
     width: 20px;
@@ -338,11 +341,11 @@ h1 {
     background-size: 100%;
     display: inline-block;
     vertical-align: bottom; }
-  /* line 104, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  /* line 107, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
   .article-overlay .search-input {
     background-color: inherit;
     border: 0px; }
-  /* line 108, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+  /* line 111, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
   .article-overlay .home, .article-overlay .profile, .article-overlay .bookmarks, .article-overlay .share, .article-overlay .font, .article-overlay .brightness {
     width: 50px;
     height: 50px;
@@ -351,3 +354,26 @@ h1 {
     margin: 25px 25px 0px;
     text-align: center;
     display: inline-block; }
+
+/* line 123, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.compass-hidden {
+  opacity: 0;
+  z-index: -1; }
+
+/* line 127, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.compass {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #FAFAE6; }
+
+/* line 138, /Users/hariananth/workspace/arc/source/stylesheets/_article.scss */
+.compass-close {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  top: 50px;
+  left: 50px; }
