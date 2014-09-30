@@ -20,18 +20,21 @@
   top: 65px; // 20px margin
 }
 // each "block" (section) in the article
-.block {
-  margin-bottom: 10px;
-  position: relative; // for the "lines" below
+.block, .compass {
   @include body;
   p {
     padding: 0px 20px;
     margin: 0px;
   }
 }
+// specific to story blocks, not compass blocks
+.block {
+  margin-bottom: 10px;
+  position: relative; // for the "lines" below
+}
 // main narrative has a distinct background color
 .storyline-0 {
-  background-color: rgba(200,200,25,0.05);
+  background-color: $offwhite;
   padding-top: 10px;
 }
 // the block header colors
@@ -114,4 +117,29 @@
     text-align: center;
     display: inline-block;
   }
+}
+
+// compass styling
+.compass-hidden {
+  opacity: 0;
+  z-index: -1;
+}
+.compass {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: $offwhite;
+  //transition: opacity .5s ease-in-out;
+  //-moz-transition: opacity .5s ease-in-out;
+  //-webkit-transition: opacity .5s ease-in-out;
+}
+.compass-close {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  top: 50px;
+  left: 50px;
 }

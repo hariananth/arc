@@ -14,16 +14,14 @@ body {
 .invisible {
   visibility: hidden;
 }
+.hide-overflow {
+  overflow: hidden;
+}
 
 // ChocolateChip-UI overrides - no nav bar, but let
 // back button show through on articles
 article[id*="article"] {
   z-index: -1;
-}
-
-// markdown overrides
-h1 { // hide the headings, since they're used as block delimiters
-  display: none;
 }
 
 @import "landing";

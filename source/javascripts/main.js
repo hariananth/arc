@@ -112,11 +112,12 @@ $(window).load(function() {
     });
   }
   function articleHandler(headline) {
-    // add a nav bar
+    // add a nav bar to the article to follow chocolatechip-ui convention
     var navbar = $("#nav-template").clone().removeClass("hidden");
     navbar.removeAttr("id");
     navbar.find("h1").html(headline.find(".title").html());
     navbar.appendTo("body");
+    // return a function that handles an article given this headline
     return function(articleHtml) {
       var article = $("#article-template").clone().removeClass("hidden");
       // set goto path for ccui
@@ -145,23 +146,54 @@ $(window).load(function() {
     // The format of the story is such that each storyline is broken into
     // sections, which are separated by H1 elements.
     var storylines = {}; // {storyLine: idx}
-    //$("p", dummyElement).wrapAll("<div class='block' />");
+    var compassContent = false;
     $("h1", dummyElement).each(function(idx){
       var h1 = $(this);
-      var storyline = h1.html();
-      var wrapperClass = "block ";
-      if (storyline in storylines) {
-        wrapperClass += "storyline-"+storylines[storyline];
-      } else {
-        storylines[storyline] = Object.keys(storylines).length;
-        wrapperClass += "storyline-"+storylines[storyline];
+      var wrapperClass = "";
+      var wrapperId = "";
+      if (h1.attr("id") === "compass-content") {
+        compassContent = true;
+        return;
+      } else if (compassContent === false) {
+        var storyline = h1.html();
+        wrapperClass += "block ";
+        if (storyline in storylines) {
+          wrapperClass += "storyline-"+storylines[storyline];
+        } else {
+          storylines[storyline] = Object.keys(storylines).length;
+          wrapperClass += "storyline-"+storylines[storyline];
+        }
+      } else { // compass content
+        wrapperClass += "compass compass-hidden"; // compass blocks "hidden" (via opacity for transition) by default
+        wrapperId = "compass-"+h1.attr("id");
       }
-      h1.nextUntil("h1").wrapAll("<div class='"+wrapperClass+"' />");
+      h1.nextUntil("h1").wrapAll("<div id='"+wrapperId+"' class='"+wrapperClass+"' />");
     });
     // add a "line" to the beginning of each block to signify the storyline
     $(dummyElement).find(".block").each(function() {
       $(this).prepend("<div class='line animated' />");
     });
+    // add a close btn to the beginning of each compass block
+    $(dummyElement).find(".compass").each(function() {
+      $(this).prepend("<div class='compass-close' />");
+    });
+    // attach listeners to the close buttons to close compass block(s)
+    $("body").on("click", ".compass-close", function() {
+      $("article.current").removeClass("hide-overflow");
+      $(".compass").addClass("compass-hidden");
+      // reset hash
+      window.location.hash = "#";
+    });
+    // for compass links, replace default browser links with push-states
+    $(dummyElement).find("a[href^='#']").each(function() {
+      $(this).attr("onclick", "javascript:history.pushState(null,null,'"+$(this).attr("href")+"'); $(window).trigger('hashchange'); return false;");
+    });
+    // for external links, add "target=_blank"
+    $(dummyElement).find("a:not([href^='#'])").each(function() {
+      $(this).attr("target", "_blank");
+    });
+    // remove all h1s (they're now just polluting the DOM...)
+    $(dummyElement).find("h1").remove();
     return dummyElement.html();
   }
   // fetch headlines
@@ -175,5 +207,12 @@ $(window).load(function() {
     $(".article-overlay").addClass("hidden");
     window.clearTimeout(window.articlePressTimer);
     return false;
+  });
+  // on hash changes, if compass link, show the corresponding compass page
+  $(window).on("hashchange", function(e) {
+    if (window.location.hash.indexOf("#compass-") === 0) {
+      $(window.location.hash).removeClass("compass-hidden");
+      $("article.current").addClass("hide-overflow");
+    }
   });
 });
